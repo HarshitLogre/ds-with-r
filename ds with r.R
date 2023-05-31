@@ -35,6 +35,7 @@ ans <-mean(matches)
 
 
 results = {}
+#Problem D
 MontyHall = function(){
   v=sample(x=1:3,size = 1)
   if(v ==1) {
@@ -54,50 +55,8 @@ for(i in 1:1000)
 {
   results[i] <- MontyHall()
 }
-ans <- sum(results)/1000
-MontyHall = function(){
-  b=sample(x=1:3,size = 1)
-  if(b ==1) {
-    return(1)
-  }
-  if(b==2) {
-    return(1)
-  }
-  else {
-    return(0)
-  }
-  if(b==3){
-    return(1)
-  }
-  else {
-    return(0)
-  }
-}#problem D
-MontyHall = function(){
-  b=sample(x=1:3,size = 1)
-  if(b ==1) {
-    return(1)
-  }
-  if(b==2) {
-    return(1)
-  }
-  else {
-    return(0)
-  }
-  if(b==3){
-    return(1)
-  }
-  else {
-    return(0)
-  }
-}
+p <- sum(results)/1000
 
-results = {}
-for(i in 1:1000) 
-{
-  results[i] <- MontyHall()
-}
-ans <- sum(results)/1000
 #problem E
 html3 = read_html("https://editorial.rottentomatoes.com/guide/best-netflix-movies-to-watch-right-now/")
 ranking=html3%>%html_elements(".countdown-index")%>%html_text()
